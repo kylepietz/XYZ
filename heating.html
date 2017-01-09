@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XYZ - Heating</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="custom.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="a2.js"></script>
+  </head>
+  <body>
+    <div class="top-row">
+    <h1>XYZ</h1>
+    <img src="logo.png" style="width:50px; height:50px; position: relative;
+    bottom: 20px;">
+      <p style="font-size: 18px;">Home security web application</p>
+        <nav>
+          <ul>
+            <a href="home.html"><li>Home</li></a>
+            <a href="#"><li>Lights</li></a>
+            <a href="#"><li>Appliances</li></a>
+            <a href="heating.html"><li style="border-bottom-color: #668BA6;">Heating</li></a>
+            <a href="#"><li>Cameras</li></a>
+            <a href="#"><li>Locks</li></a>
+            <div class="status">
+              <p>Nancy Ellington</p>
+              <a href="#">
+              <span class="glyphicon glyphicon-chevron-down"></span>
+              </a>
+            </div>
+          </ul>
+      </nav>
+    </div>
+    <div class="foreground">
+      <h2>Heating</h2>
+      <div class="all-rooms" style="display:block;">
+        <div class="living-room" style="display: block; margin: 10px 0px;">
+        <label for="rate" style="margin-left:25px; margin-right: 10px;">Living Room:</label>
+        <button style="display: inline-block;">ON/OFF</button>
+        <input type="range" max="35" min="16" value="21"
+        style="margin-right: 10px; margin-left: 10px;">
+        <p style="font-size: 20px; padding: 0px;">
+        21</p><p style="display: inline; padding-left: 0px; padding-right:
+        10px; font-size: 20px;">&deg</p>
+        <button style="display:inline; margin-right: 10px;" onclick="myFunction()">SET</button>
+      </div>
+      <div class="kitchen" style="display: block; margin: 10px 0px;">
+        <label for="rate" style="margin-left:25px; margin-right:42px;">Kitchen:</label>
+        <button style="display: inline-block;">ON/OFF</button>
+        <input type="range" max="35" min="16" value="21"
+        style="margin-right: 10px; margin-left: 10px;">
+        <p style="font-size: 20px; padding: 0px;">
+        21</p><p style="display: inline; padding-left: 0px; padding-right:
+        10px; font-size: 20px;">&deg</p>
+        <button style="display:inline; margin-right: 10px;" onclick="myFunction()">SET</button>
+      </div>
+      <div class="laundry" style="display: block; margin: 10px 0px;">
+        <label for="rate" style="margin-left:25px; margin-right:39px;">Laundry:</label>
+        <button class="off" style="display: inline-block;">ON/OFF</button>
+      </div>
+      <div class="master-bed" style="display: block; margin: 10px 0px;">
+        <label for="rate" style="margin-left:25px; margin-right:16px;">Master Bed:</label>
+        <button class="off" style="display: inline-block;">ON/OFF</button>
+      </div>
+      <div class="dining-room" style="display: block; margin: 10px 0px;">
+        <label for="rate" style="margin-left:25px; margin-right:7px;">Dining Room:</label>
+        <button id="dr-power" class="off" style="display: inline-block;">ON/OFF</button>
+        <input id="dr-slider" type="range" max="35" min="16" value="21"
+        style="margin-right: 10px; margin-left: 10px;">
+        <p style="font-size: 20px; padding: 0px;" id="degree-reading">
+        21</p><p id="degree-symbol" style="display: inline; padding-left: 0px; padding-right:
+        10px; font-size: 20px;">&deg</p>
+        <button id="dr-set" style="display:inline; margin-right: 10px;" onclick="myFunction()">SET</button>
+      </div>
+      <div class="settings" style="display: block; margin: 20px 25px;">
+        <a href="#">
+        <button style="display: inline-block; margin-right:10px;">
+        <span class="glyphicon glyphicon-cog" style="font-size:15px; padding-right: 5px;"></span>
+        <span class="glyphicon glyphicon-chevron-down" style="font-size:15px;"></span>
+        </button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+  <script>
+  function myFunction() {
+      var x = document.getElementById("dr-slider").value;
+      document.getElementById("degree-reading").innerHTML = x;
+      alert("The dining room temperature is now set to " + x + " degrees.")
+  }
+  </script>
+  </body>
+</html>
